@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import AppNavBar from './components/AppNavBar';
+import ItemModal from './components/ItemModal';
 import ShoppingList from './components/ShoppingList';
 import './App.css';
 
