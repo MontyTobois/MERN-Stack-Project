@@ -12,6 +12,7 @@ import {
   Label,
   Input
 } from 'reactstrap';
+import uuid from 'uuid';
 
 class ItemModal extends Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -28,6 +29,21 @@ class ItemModal extends Component { // eslint-disable-line react/prefer-stateles
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    const newItem ={
+      id: uuid(),
+      name:this.state.name
+    }
+
+    // Add item via addItem action
+    this.props.addItem(newItem);
+
+    // Close modal
+    this.toggle();
   }
 
   render() {
@@ -66,8 +82,8 @@ class ItemModal extends Component { // eslint-disable-line react/prefer-stateles
   }
 }
 
-// ComponentName.propTypes = {
-//   prop: PropTypes.type.isRequired
-// }
+const mapStateToProps = (state) => ({
+  item: state.item
+});
 
-export default connect()(ItemModal);
+export default connect(mapStateToProps, { addItem })(ItemModal);

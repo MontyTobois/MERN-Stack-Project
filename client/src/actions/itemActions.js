@@ -12,9 +12,9 @@ export const deleteItem = (id) => {
     payload: id
   };
 }
-export const addItem = (id) => {
+export const addItem = (item) => {
   return {
     type: ADD_ITEM,
-    payload: id
+    payload: item
   };
 }

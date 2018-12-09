@@ -16,12 +16,11 @@ export default function(state = initialState, action) {
     case GET_ITEMS:
     return {
       ...state,
-
     }
     case ADD_ITEM:
       return {
         ...state,
-
+        items: [action.payload, ...state.items]
       }
       case DELETE_ITEM:
         return {
