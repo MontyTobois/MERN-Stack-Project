@@ -12,7 +12,7 @@ import {
   Label,
   Input
 } from 'reactstrap';
-import uuid from 'uuid';
+
 
 class ItemModal extends Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -35,7 +35,6 @@ class ItemModal extends Component { // eslint-disable-line react/prefer-stateles
     e.preventDefault();
 
     const newItem ={
-      id: uuid(),
       name:this.state.name
     }
 
