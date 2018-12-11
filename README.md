@@ -42,7 +42,7 @@ The backend API uses a Mongo Database to GET, POST and DELETE items.
 
 * [React-Redux](https://react-redux.js.org/) for React-Redux assistance.
 
-* Axios Documentation for a promise based HTTP client - [Axios](https:// www.npmjs.com/package/axios)
+* Axios Documentation for a promise based HTTP client - [Axios](https://www.npmjs.com/package/axios)
 
 
 ### Create React App
